@@ -1,3 +1,16 @@
-tasks = []
-newTask = input ("What new tasks have you got? \n")
-tasks.append(newTask)
+def printMenu():
+    menuOption = int(input("To view your tasks input 1 \nTo add a task input 2 \nTo delete a task input 3 \nTo edit a task input 4 \n"))
+    if menuOption == 1:
+        viewTasks()
+    elif menuOption == 2:
+        addTask()
+    elif menuOption == 3:
+        deleteTask()
+    elif menuOption == 4:
+        editTask()
+
+def printTasks():
+    Tasks = open("Tasks.txt", "r")
+    for line in Tasks:
+        print(line)
+    Tasks.close()
