@@ -1,0 +1,3 @@
+tasks = []
+newTask = input ("What new tasks have you got? \n")
+tasks.append(newTask)
